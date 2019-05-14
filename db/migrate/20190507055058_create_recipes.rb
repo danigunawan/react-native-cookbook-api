@@ -3,6 +3,7 @@ class CreateRecipes < ActiveRecord::Migration[5.1]
     create_table :recipes do |t|
       t.string :name
       t.integer :course_type
+      t.text :description
 
       t.timestamps
     end
