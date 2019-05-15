@@ -1,7 +1,32 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+[
+  'French Fries',  'Potato Wedges',
+  'Caesar Salad', 'Lamb Kebab'
+].each do |recipe_name|
+    Recipe.create(
+      course_type: :appetizer,
+      name: recipe_name,
+      description: "Description for #{recipe_name}"
+    )
+  end
+
+[
+  'Gravlax', 'Bibimbap',
+  'Steak', 'Sweet and Sour Fish'
+].each do |recipe_name|
+    Recipe.create(
+      course_type: :main_course,
+      name: recipe_name,
+      description: "Description for #{recipe_name}"
+    )
+  end
+
+[
+  'Ice Cream', 'Banana Split',
+  'Sundae', 'Mochi', 'Bingsu'
+].each do |recipe_name|
+    Recipe.create(
+      course_type: :dessert,
+      name: recipe_name,
+      description: "Description for #{recipe_name}"
+    )
+  end
